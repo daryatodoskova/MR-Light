@@ -1,0 +1,45 @@
+# Paths
+data:
+  training_dir: "data/ASNR-MICCAI-BraTS2023-GLI-Challenge-TrainingData"
+  validation_dir: "data/ASNR-MICCAI-BraTS2023-GLI-Challenge-ValidationData"
+  preprocessed_train_dir: "data/preprocessed/training"
+  preprocessed_val_dir: "data/preprocessed/validation"
+  t1_subdir: "t1"
+  t1gd_subdir: "t1gd"
+checkpoints_dir: "checkpoints"
+logs_dir: "logs"
+
+# Preprocessing
+preprocessing:
+  target_shape: [240, 240, 155]  # Target volume shape for resampling
+  normalize_intensity: true
+
+# Training
+training:
+  model: "UNet"  # Model name
+  batch_size: 4
+  num_epochs: 50
+  learning_rate: 1e-4
+  optimizer: "adam"  # Options: adam, sgd, etc.
+  loss_function: "l1_loss"  # Options: l1_loss, mse_loss, etc.
+  save_best_model: true
+
+# Validation
+validation:
+  evaluate_every_n_epochs: 1
+  metrics:
+    - psnr  # Peak Signal-to-Noise Ratio
+    - ssim  # Structural Similarity Index
+
+# Augmentations (optional, for future extension)
+augmentations:
+  apply: true
+  rotation: 10  # Degrees
+  horizontal_flip: true
+  vertical_flip: false
+  random_crop: [200, 200, 120]
+
+# Logging
+logging:
+  log_every_n_steps: 10
+  save_logs: true
