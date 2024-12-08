@@ -1,7 +1,3 @@
-Here’s a detailed `README.md` to document your project:
-
----
-
 # **Contrast-Enhanced MRI Synthesis from Non-Contrast T1 MR Images**
 
 This project uses deep learning to synthesize contrast-enhanced T1-weighted (T1Gd) MR images from non-contrast T1 MR images in the brain. The solution is built on the BraTS2023 dataset, employing preprocessing, U-Net-based neural networks, and robust evaluation metrics to achieve state-of-the-art results.
@@ -149,19 +145,3 @@ Sample visualization:
 | Input T1  | Generated T1Gd | Ground Truth T1Gd |
 |-----------|----------------|-------------------|
 | ![Input](example_images/input_t1.png) | ![Generated](example_images/generated_t1gd.png) | ![Ground Truth](example_images/ground_truth_t1gd.png) |
-
----
-
-## **Future Work**
-- Incorporate additional modalities (e.g., T2, T2-FLAIR).
-- Optimize model architecture for higher fidelity synthesis.
-- Deploy as a real-time inference tool for clinical applications.
-
----
-
-## **Contact**
-For questions or collaboration, please reach out to **[Your Name]** at **[Your Email]**.
-
----
-
-Let me know if you'd like to customize this further!
